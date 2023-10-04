@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+.big-box{
+    background-color: gray;
+    height: 500px;
+    width: 500px;
+}
+
+.rörande-box{
+    background-color: rgb(255, 0, 0);
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    /* transition: 1s (ease-in-out, linear, cubic-bezier(0.7, 0.04, 0.6, 1.7)) 2s(delay) forwards; 
+    */
+    animation: namnrunt 0.5s ease-in forwards infinite ; /* 4 alternate fram och tillbaka */
+}
+
+.big-box:hover .rörande-box{
+    
+    
+    animation-play-state: paused;
+}
+
+@keyframes namnrunt{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateY(100%);
+        background-color: green;
+    }
+
+    50%{
+        transform: translateX(100%) translateY(100%);
+        background-color: blue;
+    }
+
+    75%{
+        transform: translateX(100%) translateY(0%);
+        background-color: black;
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
